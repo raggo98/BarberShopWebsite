@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="Main.css">
+
+<!-- Header class -->
+<div class="header">
+  <a href="index.html">
+    <img  href="index.html" src="Assets\LogoShopFront.JPG" alt="Shop logo">
+  </a>
+</div>
+
+<!-- Page title class -->
+<div class="belowHead">
+        <h1>Products </h1>
+</div>
+
+<!-- Product page class-->
+<div class="productsPageContent">
+    <?php
+       $pdo= new PDO("mysql:host=localhost;dbname=thebscdn_Products","thebscdn_rwhutton","Graigue12"); //Connecting to the database
+       $query = "select * from Products"; //query to get the data from products table
+       $d = $pdo->query($query); //Puts the query data into variable 
+    ?> 
+    <div class="grid-container"> 
+        <?php
+        foreach ($d as $data){ //Loop to run until the array of data is complete
+        ?>    
+            <div class="baws">
+            <div class="small-grid-container">
+            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $data['img'] ).'"/>';?>
+           
+            <div class="tprod-name"><?php echo $data['name']; ?>  </div>
+            <div class="tprod-desc"><?php echo $data['desc']; ?></div>
+            <div class ="tprod-price">£<?php echo $data['price']; ?></div>
+            </div>
+            </div>
+        <?php
+        }
+        ?>
+</div>
+</div>;
+
+<!--Icon bar-->
+<div class="icon-bar">
+  <a href="HairServices.php"><img src="Assets\scissorsIcon.png" alt="HairPrices">
+    <br>
+    <b>Haircuts</b>
+  </a>
+  <a href="Products.php"><img src="Assets\Gel-icon.png" alt="products">
+    <br>
+    <b>Products</b>
+  </a>
+  <a href="Booking.html"><img src="Assets\Calender.png" alt="Calender">
+    <br>
+    <b>Bookings</b>
+  </a>
+  <a href="Staff.html"><img src="Assets\staffIcon.png" alt="staff">
+    <br>
+    <b>Staff</b>
+  </a>
+  <a href="Contact.html"><img src="Assets\phoneIcon.png" alt="contact">
+    <br>
+    <b>Contact</b>
+  </a>
+</div>
