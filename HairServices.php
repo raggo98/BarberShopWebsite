@@ -19,10 +19,10 @@
 <!-- Haircuts body class -->
 <div class ="hcPageContent">
   <?php
-        $DATABASE_HOST = 'localhost';
-        $DATABASE_USER = 'thebscdn_rwhutton';
-        $DATABASE_PASS = 'Graigue12';
-        $DATABASE_NAME = 'thebscdn_Products';
+        $DATABASE_HOST = '########';
+        $DATABASE_USER = '########';
+        $DATABASE_PASS = '########';
+        $DATABASE_NAME = '########';
         
         $conn = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME); //Connecting to the database
 

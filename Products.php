@@ -16,7 +16,7 @@
 <!-- Product page class-->
 <div class="productsPageContent">
     <?php
-       $pdo= new PDO("mysql:host=localhost;dbname=thebscdn_Products","thebscdn_rwhutton","Graigue12"); //Connecting to the database
+       $pdo= new PDO("mysql:host=#######;dbname=thebscdn_Products","#######","#######"); //Connecting to the database
        $query = "select * from Products"; //query to get the data from products table
        $d = $pdo->query($query); //Puts the query data into variable 
     ?> 

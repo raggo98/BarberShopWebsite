@@ -18,7 +18,7 @@
 <div class="productsPageContent">
 
     <?php
-       $pdo= new PDO("mysql:host=localhost;dbname=thebscdn_Products","thebscdn_rwhutton","Graigue12");
+       $pdo= new PDO("mysql:host=########;dbname=########","########","########");
        $query = "select * from Products";
        $d = $pdo->query($query);
     ?> 

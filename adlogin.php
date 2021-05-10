@@ -1,5 +1,5 @@
 <?php
-    $pdo= new PDO("mysql:host=localhost;dbname=thebscdn_Products","thebscdn_rwhutton","Graigue12");
+    $pdo= new PDO("mysql:host=########;dbname=########","########","########");
     if(isset($_POST['login']))
     {
         $user =$_POST['username'];
